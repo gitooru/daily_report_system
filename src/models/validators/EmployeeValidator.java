@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import models.Employee;
 import utils.DBUtil;
 
-public class EmployeeValidators {
+public class EmployeeValidator {
     public static List<String> validate(Employee e, Boolean code_duplicate_check_flag, Boolean password_check_flag) {
         List<String> errors = new ArrayList<String>();
 
@@ -28,15 +28,15 @@ public class EmployeeValidators {
         }
 
         return errors;
+    }
 
-}
-
-// 社員番号
+    // 社員番号
     private static String _validateCode(String code, Boolean code_duplicate_check_flag) {
         // 必須入力チェック
         if(code == null || code.equals("")) {
             return "社員番号を入力してください。";
         }
+
         // すでに登録されている社員番号との重複チェック
         if(code_duplicate_check_flag) {
             EntityManager em = DBUtil.createEntityManager();
@@ -58,7 +58,7 @@ public class EmployeeValidators {
             return "氏名を入力してください。";
         }
 
-        return"";
+        return "";
     }
 
     // パスワードの必須入力チェック
@@ -69,7 +69,6 @@ public class EmployeeValidators {
         }
         return "";
     }
-
-  }
+}
 
 
