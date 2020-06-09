@@ -64,7 +64,7 @@ public class Report {
         return employee;
     }
 
-    public void setEmployee(Employee Employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
