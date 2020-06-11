@@ -118,7 +118,7 @@ select {
 }
 
 #employee_name{
-    color: #ccccc
+    color: #cccccc;
     width: 36%;
     padding-right: 3%;
     text-align: right;
@@ -126,7 +126,7 @@ select {
 }
 
 #header a{
-    color: #eeeeeee;
+    color: #eeeeee;
 }
 
 h1 a {
